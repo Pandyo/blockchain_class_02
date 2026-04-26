@@ -1,0 +1,36 @@
+{
+  "language": "Solidity",
+  "sources": {
+    "contracts/TipJarPlus.sol": {
+      "content": "// SPDX-License-Identifier: UNLICENSED\npragma solidity ^0.8.13;\n\ncontract TipJarPlus {\n    address public owner;\n\n    struct Tip {\n        address tipper;\n        uint256 amount;\n        string message;\n        uint256 timestamp;\n    }\n\n    Tip[] private tips;\n\n    mapping(address => uint256) public totalTipsByAddress;\n\n    event TipReceived(address indexed tipper, uint256 amount, string message, uint256 timestamp);\n\n    event TipWithdrawn(address indexed owner, uint256 amount);\n\n    constructor() {\n        owner = msg.sender;\n    }\n\n    modifier onlyOwner() {\n        require(msg.sender == owner, \"Only owner can call this function.\");\n        _;\n    }\n\n    receive() external payable {\n        _saveTip(\"\");\n    }\n\n    function tip(string memory _message) public payable {\n        require(msg.value > 0, \"Tip amount must be greater than zero.\");\n        _saveTip(_message);\n    }\n\n    function _saveTip(string memory _message) internal {\n        require(msg.value > 0, \"Tip amount must be greater than zero.\");\n\n        tips.push(Tip({ tipper: msg.sender, amount: msg.value, message: _message, timestamp: block.timestamp }));\n\n        totalTipsByAddress[msg.sender] += msg.value;\n\n        emit TipReceived(msg.sender, msg.value, _message, block.timestamp);\n    }\n\n    function withdrawTips() public onlyOwner {\n        uint256 contractBalance = address(this).balance;\n        require(contractBalance > 0, \"There are no tips to withdraw.\");\n\n        emit TipWithdrawn(owner, contractBalance);\n\n        (bool success, ) = payable(owner).call{ value: contractBalance }(\"\");\n        require(success, \"Transfer failed.\");\n    }\n\n    function getBalance() public view returns (uint256) {\n        return address(this).balance;\n    }\n\n    function getTipCount() public view returns (uint256) {\n        return tips.length;\n    }\n\n    function getTip(\n        uint256 _index\n    ) public view returns (address tipper, uint256 amount, string memory message, uint256 timestamp) {\n        require(_index < tips.length, \"Invalid index.\");\n\n        Tip memory selectedTip = tips[_index];\n\n        return (selectedTip.tipper, selectedTip.amount, selectedTip.message, selectedTip.timestamp);\n    }\n\n    function getAllTips() public view returns (Tip[] memory) {\n        return tips;\n    }\n}\n"
+    }
+  },
+  "settings": {
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "evmVersion": "paris",
+    "outputSelection": {
+      "*": {
+        "*": [
+          "abi",
+          "evm.bytecode",
+          "evm.deployedBytecode",
+          "evm.methodIdentifiers",
+          "metadata",
+          "devdoc",
+          "userdoc",
+          "storageLayout",
+          "evm.gasEstimates"
+        ],
+        "": [
+          "ast"
+        ]
+      }
+    },
+    "metadata": {
+      "useLiteralContent": true
+    }
+  }
+}

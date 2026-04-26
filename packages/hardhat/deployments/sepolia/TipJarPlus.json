@@ -1,0 +1,340 @@
+{
+  "address": "0xe70Baa2d8fCEcEa5b5894aD62Cf6BC026Fb1f497",
+  "abi": [
+    {
+      "inputs": [],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "tipper",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "message",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "timestamp",
+          "type": "uint256"
+        }
+      ],
+      "name": "TipReceived",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "TipWithdrawn",
+      "type": "event"
+    },
+    {
+      "inputs": [],
+      "name": "getAllTips",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "address",
+              "name": "tipper",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "amount",
+              "type": "uint256"
+            },
+            {
+              "internalType": "string",
+              "name": "message",
+              "type": "string"
+            },
+            {
+              "internalType": "uint256",
+              "name": "timestamp",
+              "type": "uint256"
+            }
+          ],
+          "internalType": "struct TipJarPlus.Tip[]",
+          "name": "",
+          "type": "tuple[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getBalance",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_index",
+          "type": "uint256"
+        }
+      ],
+      "name": "getTip",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "tipper",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "string",
+          "name": "message",
+          "type": "string"
+        },
+        {
+          "internalType": "uint256",
+          "name": "timestamp",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "getTipCount",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "_message",
+          "type": "string"
+        }
+      ],
+      "name": "tip",
+      "outputs": [],
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "totalTipsByAddress",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "withdrawTips",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "stateMutability": "payable",
+      "type": "receive"
+    }
+  ],
+  "transactionHash": "0xc9cb812d7744505fb543e369319ada2f602140e68db10f164497c6978156656c",
+  "receipt": {
+    "to": null,
+    "from": "0x26aD80A93Ef7879Ab29F3cbDE43acC7cA266bb23",
+    "contractAddress": "0xe70Baa2d8fCEcEa5b5894aD62Cf6BC026Fb1f497",
+    "transactionIndex": 98,
+    "gasUsed": "726777",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "blockHash": "0x4e7db9ce62cdf2ea8a6f35052075943a086e542d7ea5bb6d263bd5ddb4491509",
+    "transactionHash": "0xc9cb812d7744505fb543e369319ada2f602140e68db10f164497c6978156656c",
+    "logs": [],
+    "blockNumber": 10734113,
+    "cumulativeGasUsed": "18609634",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [],
+  "numDeployments": 1,
+  "solcInputHash": "14c7ca09f4a0a5b434c6bc49fb7d5f42",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.30+commit.73712a01\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"tipper\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"string\",\"name\":\"message\",\"type\":\"string\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"timestamp\",\"type\":\"uint256\"}],\"name\":\"TipReceived\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"TipWithdrawn\",\"type\":\"event\"},{\"inputs\":[],\"name\":\"getAllTips\",\"outputs\":[{\"components\":[{\"internalType\":\"address\",\"name\":\"tipper\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"internalType\":\"string\",\"name\":\"message\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"timestamp\",\"type\":\"uint256\"}],\"internalType\":\"struct TipJarPlus.Tip[]\",\"name\":\"\",\"type\":\"tuple[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getBalance\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_index\",\"type\":\"uint256\"}],\"name\":\"getTip\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"tipper\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"internalType\":\"string\",\"name\":\"message\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"timestamp\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getTipCount\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"_message\",\"type\":\"string\"}],\"name\":\"tip\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"totalTipsByAddress\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"withdrawTips\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"stateMutability\":\"payable\",\"type\":\"receive\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/TipJarPlus.sol\":\"TipJarPlus\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"contracts/TipJarPlus.sol\":{\"content\":\"// SPDX-License-Identifier: UNLICENSED\\npragma solidity ^0.8.13;\\n\\ncontract TipJarPlus {\\n    address public owner;\\n\\n    struct Tip {\\n        address tipper;\\n        uint256 amount;\\n        string message;\\n        uint256 timestamp;\\n    }\\n\\n    Tip[] private tips;\\n\\n    mapping(address => uint256) public totalTipsByAddress;\\n\\n    event TipReceived(address indexed tipper, uint256 amount, string message, uint256 timestamp);\\n\\n    event TipWithdrawn(address indexed owner, uint256 amount);\\n\\n    constructor() {\\n        owner = msg.sender;\\n    }\\n\\n    modifier onlyOwner() {\\n        require(msg.sender == owner, \\\"Only owner can call this function.\\\");\\n        _;\\n    }\\n\\n    receive() external payable {\\n        _saveTip(\\\"\\\");\\n    }\\n\\n    function tip(string memory _message) public payable {\\n        require(msg.value > 0, \\\"Tip amount must be greater than zero.\\\");\\n        _saveTip(_message);\\n    }\\n\\n    function _saveTip(string memory _message) internal {\\n        require(msg.value > 0, \\\"Tip amount must be greater than zero.\\\");\\n\\n        tips.push(Tip({ tipper: msg.sender, amount: msg.value, message: _message, timestamp: block.timestamp }));\\n\\n        totalTipsByAddress[msg.sender] += msg.value;\\n\\n        emit TipReceived(msg.sender, msg.value, _message, block.timestamp);\\n    }\\n\\n    function withdrawTips() public onlyOwner {\\n        uint256 contractBalance = address(this).balance;\\n        require(contractBalance > 0, \\\"There are no tips to withdraw.\\\");\\n\\n        emit TipWithdrawn(owner, contractBalance);\\n\\n        (bool success, ) = payable(owner).call{ value: contractBalance }(\\\"\\\");\\n        require(success, \\\"Transfer failed.\\\");\\n    }\\n\\n    function getBalance() public view returns (uint256) {\\n        return address(this).balance;\\n    }\\n\\n    function getTipCount() public view returns (uint256) {\\n        return tips.length;\\n    }\\n\\n    function getTip(\\n        uint256 _index\\n    ) public view returns (address tipper, uint256 amount, string memory message, uint256 timestamp) {\\n        require(_index < tips.length, \\\"Invalid index.\\\");\\n\\n        Tip memory selectedTip = tips[_index];\\n\\n        return (selectedTip.tipper, selectedTip.amount, selectedTip.message, selectedTip.timestamp);\\n    }\\n\\n    function getAllTips() public view returns (Tip[] memory) {\\n        return tips;\\n    }\\n}\\n\",\"keccak256\":\"0x1a841ba3aab3922c74f6c3fc783e3431d71f7f12117920e6dfaa8d9966e4554c\",\"license\":\"UNLICENSED\"}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b50600080546001600160a01b03191633179055610bc7806100316000396000f3fe60806040526004361061007f5760003560e01c80635b703f5c1161004e5780635b703f5c146101295780637dc1a64f146101595780638da5cb5b1461016e578063cb56393c146101a657600080fd5b806312065fe0146100a3578063399ddbbd146100c55780633aaa74b2146100e7578063401ac338146100fc57600080fd5b3661009e5761009c604051806020016040528060008152506101b9565b005b600080fd5b3480156100af57600080fd5b50475b6040519081526020015b60405180910390f35b3480156100d157600080fd5b506100da610327565b6040516100bc91906107b5565b3480156100f357600080fd5b5061009c610442565b34801561010857600080fd5b506100b261011736600461084e565b60026020526000908152604090205481565b34801561013557600080fd5b5061014961014436600461087e565b6105d1565b6040516100bc9493929190610897565b34801561016557600080fd5b506001546100b2565b34801561017a57600080fd5b5060005461018e906001600160a01b031681565b6040516001600160a01b0390911681526020016100bc565b61009c6101b43660046108e5565b610743565b600034116101e25760405162461bcd60e51b81526004016101d99061099e565b60405180910390fd5b60408051608081018252338152346020820190815291810183815242606083015260018054808201825560009190915282517fb10e2d527612073b26eecdfd717e6a320cf44b4afac2b0732d9fcbe2b7fa0cf6600490920291820180546001600160a01b0319166001600160a01b0390921691909117815593517fb10e2d527612073b26eecdfd717e6a320cf44b4afac2b0732d9fcbe2b7fa0cf782015590519192917fb10e2d527612073b26eecdfd717e6a320cf44b4afac2b0732d9fcbe2b7fa0cf8909101906102b49082610a6c565b506060919091015160039091015533600090815260026020526040812080543492906102e1908490610b2b565b909155505060405133907f29d2acb965986a1fe174d04eba9576060ab34d78694e86de5173774628790ef09061031c90349085904290610b52565b60405180910390a250565b60606001805480602002602001604051908101604052809291908181526020016000905b82821015610439576000848152602090819020604080516080810182526004860290920180546001600160a01b031683526001810154938301939093526002830180549293929184019161039e906109e3565b80601f01602080910402602001604051908101604052809291908181526020018280546103ca906109e3565b80156104175780601f106103ec57610100808354040283529160200191610417565b820191906000526020600020905b8154815290600101906020018083116103fa57829003601f168201915b505050505081526020016003820154815250508152602001906001019061034b565b50505050905090565b6000546001600160a01b031633146104a75760405162461bcd60e51b815260206004820152602260248201527f4f6e6c79206f776e65722063616e2063616c6c20746869732066756e6374696f604482015261371760f11b60648201526084016101d9565b47806104f55760405162461bcd60e51b815260206004820152601e60248201527f546865726520617265206e6f207469707320746f2077697468647261772e000060448201526064016101d9565b6000546040518281526001600160a01b03909116907fb90a88a5e6d88aa2baf23e87edd29a157df95572bb85a56cdaeaf0b00b548d1c9060200160405180910390a2600080546040516001600160a01b039091169083908381818185875af1925050503d8060008114610584576040519150601f19603f3d011682016040523d82523d6000602084013e610589565b606091505b50509050806105cd5760405162461bcd60e51b815260206004820152601060248201526f2a3930b739b332b9103330b4b632b21760811b60448201526064016101d9565b5050565b60008060606000600180549050851061061d5760405162461bcd60e51b815260206004820152600e60248201526d24b73b30b634b21034b73232bc1760911b60448201526064016101d9565b60006001868154811061063257610632610b7b565b90600052602060002090600402016040518060800160405290816000820160009054906101000a90046001600160a01b03166001600160a01b03166001600160a01b0316815260200160018201548152602001600282018054610694906109e3565b80601f01602080910402602001604051908101604052809291908181526020018280546106c0906109e3565b801561070d5780601f106106e25761010080835404028352916020019161070d565b820191906000526020600020905b8154815290600101906020018083116106f057829003601f168201915b50505091835250506003919091015460209182015281519082015160408301516060909301519199909850919650945092505050565b600034116107635760405162461bcd60e51b81526004016101d99061099e565b61076c816101b9565b50565b6000815180845260005b8181101561079557602081850181015186830182015201610779565b506000602082860101526020601f19601f83011685010191505092915050565b6000602082016020835280845180835260408501915060408160051b86010192506020860160005b8281101561084257603f19878603018452815160018060a01b0381511686526020810151602087015260408101516080604088015261081f608088018261076f565b6060928301519790920196909652945060209384019391909101906001016107dd565b50929695505050505050565b60006020828403121561086057600080fd5b81356001600160a01b038116811461087757600080fd5b9392505050565b60006020828403121561089057600080fd5b5035919050565b60018060a01b03851681528360208201526080604082015260006108be608083018561076f565b905082606083015295945050505050565b634e487b7160e01b600052604160045260246000fd5b6000602082840312156108f757600080fd5b813567ffffffffffffffff81111561090e57600080fd5b8201601f8101841361091f57600080fd5b803567ffffffffffffffff811115610939576109396108cf565b604051601f8201601f19908116603f0116810167ffffffffffffffff81118282101715610968576109686108cf565b60405281815282820160200186101561098057600080fd5b81602084016020830137600091810160200191909152949350505050565b60208082526025908201527f54697020616d6f756e74206d7573742062652067726561746572207468616e206040820152643d32b9379760d91b606082015260800190565b600181811c908216806109f757607f821691505b602082108103610a1757634e487b7160e01b600052602260045260246000fd5b50919050565b601f821115610a6757806000526020600020601f840160051c81016020851015610a445750805b601f840160051c820191505b81811015610a645760008155600101610a50565b50505b505050565b815167ffffffffffffffff811115610a8657610a866108cf565b610a9a81610a9484546109e3565b84610a1d565b6020601f821160018114610ace5760008315610ab65750848201515b600019600385901b1c1916600184901b178455610a64565b600084815260208120601f198516915b82811015610afe5787850151825560209485019460019092019101610ade565b5084821015610b1c5786840151600019600387901b60f8161c191681555b50505050600190811b01905550565b80820180821115610b4c57634e487b7160e01b600052601160045260246000fd5b92915050565b838152606060208201526000610b6b606083018561076f565b9050826040830152949350505050565b634e487b7160e01b600052603260045260246000fdfea26469706673582212200b2da1963dc8e3319469b7e353d2958a82eb80232b3276ac0bc926d92ab9e18664736f6c634300081e0033",
+  "deployedBytecode": "0x60806040526004361061007f5760003560e01c80635b703f5c1161004e5780635b703f5c146101295780637dc1a64f146101595780638da5cb5b1461016e578063cb56393c146101a657600080fd5b806312065fe0146100a3578063399ddbbd146100c55780633aaa74b2146100e7578063401ac338146100fc57600080fd5b3661009e5761009c604051806020016040528060008152506101b9565b005b600080fd5b3480156100af57600080fd5b50475b6040519081526020015b60405180910390f35b3480156100d157600080fd5b506100da610327565b6040516100bc91906107b5565b3480156100f357600080fd5b5061009c610442565b34801561010857600080fd5b506100b261011736600461084e565b60026020526000908152604090205481565b34801561013557600080fd5b5061014961014436600461087e565b6105d1565b6040516100bc9493929190610897565b34801561016557600080fd5b506001546100b2565b34801561017a57600080fd5b5060005461018e906001600160a01b031681565b6040516001600160a01b0390911681526020016100bc565b61009c6101b43660046108e5565b610743565b600034116101e25760405162461bcd60e51b81526004016101d99061099e565b60405180910390fd5b60408051608081018252338152346020820190815291810183815242606083015260018054808201825560009190915282517fb10e2d527612073b26eecdfd717e6a320cf44b4afac2b0732d9fcbe2b7fa0cf6600490920291820180546001600160a01b0319166001600160a01b0390921691909117815593517fb10e2d527612073b26eecdfd717e6a320cf44b4afac2b0732d9fcbe2b7fa0cf782015590519192917fb10e2d527612073b26eecdfd717e6a320cf44b4afac2b0732d9fcbe2b7fa0cf8909101906102b49082610a6c565b506060919091015160039091015533600090815260026020526040812080543492906102e1908490610b2b565b909155505060405133907f29d2acb965986a1fe174d04eba9576060ab34d78694e86de5173774628790ef09061031c90349085904290610b52565b60405180910390a250565b60606001805480602002602001604051908101604052809291908181526020016000905b82821015610439576000848152602090819020604080516080810182526004860290920180546001600160a01b031683526001810154938301939093526002830180549293929184019161039e906109e3565b80601f01602080910402602001604051908101604052809291908181526020018280546103ca906109e3565b80156104175780601f106103ec57610100808354040283529160200191610417565b820191906000526020600020905b8154815290600101906020018083116103fa57829003601f168201915b505050505081526020016003820154815250508152602001906001019061034b565b50505050905090565b6000546001600160a01b031633146104a75760405162461bcd60e51b815260206004820152602260248201527f4f6e6c79206f776e65722063616e2063616c6c20746869732066756e6374696f604482015261371760f11b60648201526084016101d9565b47806104f55760405162461bcd60e51b815260206004820152601e60248201527f546865726520617265206e6f207469707320746f2077697468647261772e000060448201526064016101d9565b6000546040518281526001600160a01b03909116907fb90a88a5e6d88aa2baf23e87edd29a157df95572bb85a56cdaeaf0b00b548d1c9060200160405180910390a2600080546040516001600160a01b039091169083908381818185875af1925050503d8060008114610584576040519150601f19603f3d011682016040523d82523d6000602084013e610589565b606091505b50509050806105cd5760405162461bcd60e51b815260206004820152601060248201526f2a3930b739b332b9103330b4b632b21760811b60448201526064016101d9565b5050565b60008060606000600180549050851061061d5760405162461bcd60e51b815260206004820152600e60248201526d24b73b30b634b21034b73232bc1760911b60448201526064016101d9565b60006001868154811061063257610632610b7b565b90600052602060002090600402016040518060800160405290816000820160009054906101000a90046001600160a01b03166001600160a01b03166001600160a01b0316815260200160018201548152602001600282018054610694906109e3565b80601f01602080910402602001604051908101604052809291908181526020018280546106c0906109e3565b801561070d5780601f106106e25761010080835404028352916020019161070d565b820191906000526020600020905b8154815290600101906020018083116106f057829003601f168201915b50505091835250506003919091015460209182015281519082015160408301516060909301519199909850919650945092505050565b600034116107635760405162461bcd60e51b81526004016101d99061099e565b61076c816101b9565b50565b6000815180845260005b8181101561079557602081850181015186830182015201610779565b506000602082860101526020601f19601f83011685010191505092915050565b6000602082016020835280845180835260408501915060408160051b86010192506020860160005b8281101561084257603f19878603018452815160018060a01b0381511686526020810151602087015260408101516080604088015261081f608088018261076f565b6060928301519790920196909652945060209384019391909101906001016107dd565b50929695505050505050565b60006020828403121561086057600080fd5b81356001600160a01b038116811461087757600080fd5b9392505050565b60006020828403121561089057600080fd5b5035919050565b60018060a01b03851681528360208201526080604082015260006108be608083018561076f565b905082606083015295945050505050565b634e487b7160e01b600052604160045260246000fd5b6000602082840312156108f757600080fd5b813567ffffffffffffffff81111561090e57600080fd5b8201601f8101841361091f57600080fd5b803567ffffffffffffffff811115610939576109396108cf565b604051601f8201601f19908116603f0116810167ffffffffffffffff81118282101715610968576109686108cf565b60405281815282820160200186101561098057600080fd5b81602084016020830137600091810160200191909152949350505050565b60208082526025908201527f54697020616d6f756e74206d7573742062652067726561746572207468616e206040820152643d32b9379760d91b606082015260800190565b600181811c908216806109f757607f821691505b602082108103610a1757634e487b7160e01b600052602260045260246000fd5b50919050565b601f821115610a6757806000526020600020601f840160051c81016020851015610a445750805b601f840160051c820191505b81811015610a645760008155600101610a50565b50505b505050565b815167ffffffffffffffff811115610a8657610a866108cf565b610a9a81610a9484546109e3565b84610a1d565b6020601f821160018114610ace5760008315610ab65750848201515b600019600385901b1c1916600184901b178455610a64565b600084815260208120601f198516915b82811015610afe5787850151825560209485019460019092019101610ade565b5084821015610b1c5786840151600019600387901b60f8161c191681555b50505050600190811b01905550565b80820180821115610b4c57634e487b7160e01b600052601160045260246000fd5b92915050565b838152606060208201526000610b6b606083018561076f565b9050826040830152949350505050565b634e487b7160e01b600052603260045260246000fdfea26469706673582212200b2da1963dc8e3319469b7e353d2958a82eb80232b3276ac0bc926d92ab9e18664736f6c634300081e0033",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [
+      {
+        "astId": 3,
+        "contract": "contracts/TipJarPlus.sol:TipJarPlus",
+        "label": "owner",
+        "offset": 0,
+        "slot": "0",
+        "type": "t_address"
+      },
+      {
+        "astId": 16,
+        "contract": "contracts/TipJarPlus.sol:TipJarPlus",
+        "label": "tips",
+        "offset": 0,
+        "slot": "1",
+        "type": "t_array(t_struct(Tip)12_storage)dyn_storage"
+      },
+      {
+        "astId": 20,
+        "contract": "contracts/TipJarPlus.sol:TipJarPlus",
+        "label": "totalTipsByAddress",
+        "offset": 0,
+        "slot": "2",
+        "type": "t_mapping(t_address,t_uint256)"
+      }
+    ],
+    "types": {
+      "t_address": {
+        "encoding": "inplace",
+        "label": "address",
+        "numberOfBytes": "20"
+      },
+      "t_array(t_struct(Tip)12_storage)dyn_storage": {
+        "base": "t_struct(Tip)12_storage",
+        "encoding": "dynamic_array",
+        "label": "struct TipJarPlus.Tip[]",
+        "numberOfBytes": "32"
+      },
+      "t_mapping(t_address,t_uint256)": {
+        "encoding": "mapping",
+        "key": "t_address",
+        "label": "mapping(address => uint256)",
+        "numberOfBytes": "32",
+        "value": "t_uint256"
+      },
+      "t_string_storage": {
+        "encoding": "bytes",
+        "label": "string",
+        "numberOfBytes": "32"
+      },
+      "t_struct(Tip)12_storage": {
+        "encoding": "inplace",
+        "label": "struct TipJarPlus.Tip",
+        "members": [
+          {
+            "astId": 5,
+            "contract": "contracts/TipJarPlus.sol:TipJarPlus",
+            "label": "tipper",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_address"
+          },
+          {
+            "astId": 7,
+            "contract": "contracts/TipJarPlus.sol:TipJarPlus",
+            "label": "amount",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_uint256"
+          },
+          {
+            "astId": 9,
+            "contract": "contracts/TipJarPlus.sol:TipJarPlus",
+            "label": "message",
+            "offset": 0,
+            "slot": "2",
+            "type": "t_string_storage"
+          },
+          {
+            "astId": 11,
+            "contract": "contracts/TipJarPlus.sol:TipJarPlus",
+            "label": "timestamp",
+            "offset": 0,
+            "slot": "3",
+            "type": "t_uint256"
+          }
+        ],
+        "numberOfBytes": "128"
+      },
+      "t_uint256": {
+        "encoding": "inplace",
+        "label": "uint256",
+        "numberOfBytes": "32"
+      }
+    }
+  }
+}
