@@ -22,9 +22,6 @@ node_modules
 # cli
 dist
 
-echo ".env" >> .gitignore
-echo "packages/hardhat/.env" >> .gitignore
-git add .
-git commit -m "ignore env files"
-git push.env
+.env*
+.env
 packages/hardhat/.env
